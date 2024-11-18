@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 export default function EmailSignup() {
-  const CodeText1 = `JWT_SECRET_KEY="secret" //jwt random secret key for encryption and decryption permission`;
+  const CodeText1 = `JWT_SECRET_KEY="secretkey" //jwt random secret key for encryption and decryption permission`;
   const CodeText2 = `const Provider = {
      EmailPassSignup: { email, password, otpneeded: false},
 };`;
@@ -40,7 +40,7 @@ SENDER_EMAIL_PASSWORD="asdasddwefeff" // Secret password generated from the Gmai
 JWT_SECRET_KEY="secretkey" // Random secret key used for JWT encryption and decryption
 STATE_SECRET="sdfsdfsdfsdfsdfsd" // Secret random string used for OAuth
 REDIS_HOST="redis-232434.fsdf3.3444.44-cloud.com" // Your Redis host URL
-REDIS_PORT="324223" // Your Redis port
+REDIS_PORT="324523" // Your Redis port
 REDIS_PASSWORD="fsdfsdfsfwewegergerhr" // Your Redis password`;
 
   const CodeText8 = `const Provider = {

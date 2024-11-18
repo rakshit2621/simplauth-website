@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 function GithubOAuth() {
   const CodeText1 = `JWT_SECRET_KEY="secretkey" // Random secret key used for JWT encryption and decryption
-GITHUB_CLIENT_ID="Ov23liuoE9Ttx0N8Fvgb" // Client ID for the GitHub OAuth application
-GITHUB_CLIENT_SECRET="19b9ca7c98255893e98a4830b4637f405eaea2b9" // Client secret for the GitHub OAuth application
+GITHUB_CLIENT_ID="Ower33sdfvsdfwefwe8Fvgb" // Client ID for the GitHub OAuth application
+GITHUB_CLIENT_SECRET="19b54tr4r4t45t45ter0b4aea2b9" // Client secret for the GitHub OAuth application
 GITHUB_REDIRECT_URL="http://localhost:3000/OAuthCallbacks/Github" // Redirect URL for GitHub OAuth callback
 `;
   const CodeText2 = `const response = await fetch(\`backendroute\`); //backend route to get the Github consent screen url

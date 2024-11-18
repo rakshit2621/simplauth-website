@@ -6,8 +6,8 @@ function EmailToOTP() {
 SENDER_EMAIL_PASSWORD="asdasddwefeff" // Secret password generated from the Gmail platform to enable sending emails
 JWT_SECRET_KEY="secretkey" // Random secret key used for JWT encryption and decryption
 REDIS_HOST="redis-232434.fsdf3.3444.44-cloud.com" // Your Redis host URL
-REDIS_PORT="324223" // Your Redis port
-REDIS_PASSWORD="fsdfsdfsfwewegergerhr" // Your Redis password`;
+REDIS_PORT="322323" // Your Redis port
+REDIS_PASSWORD="fsdfsefgfdggewegergerhr" // Your Redis password`;
   const CodeText2 = `const Provider = { EmailtoOtp: { email } };
 
 const response = await fetch(\`backendroute\`, {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CopyableText from "@/components/HelperComponents/CopyableText";
 import Link from "next/link";
 function UserEmailSignin() {
-  const CodeText1 = `JWT_SECRET_KEY="secret" //jwt random secret key for encryption and decryption permission`;
+  const CodeText1 = `JWT_SECRET_KEY="secretkey" //jwt random secret key for encryption and decryption permission`;
   const CodeText2=`const mycookies = document.cookie;
 const cookiePairs = mycookies.split(";");
 let cookieValue = "";

@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 export default function UserEmailSignup() {
-  const CodeText1 = `JWT_SECRET_KEY="secret" //jwt random secret key for encryption and decryption permission`;
+  const CodeText1 = `JWT_SECRET_KEY="secretkey" //jwt random secret key for encryption and decryption permission`;
   const CodeText2 = `const Provider = {
      UserEmailPassSignup: { username, email, password, otpneeded: false},
 };`;
@@ -40,7 +40,7 @@ const response = await Simplauth(Provider);`;
 SENDER_EMAIL_PASSWORD="asdasddwefeff" // Secret password generated from the Gmail platform to enable sending emails
 JWT_SECRET_KEY="secretkey" // Random secret key used for JWT encryption and decryption
 REDIS_HOST="redis-232434.fsdf3.3444.44-cloud.com" // Your Redis host URL
-REDIS_PORT="324223" // Your Redis port
+REDIS_PORT="374223" // Your Redis port
 REDIS_PASSWORD="fsdfsdfsfwewegergerhr" // Your Redis password`;
 
   const CodeText8 = `const Provider = {

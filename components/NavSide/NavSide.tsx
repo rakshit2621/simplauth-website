@@ -1,7 +1,7 @@
 "use client";
 import logo from "@/Resources/Images/logo.png";
-import nextlogo from "@/Resources/Images/nextjs.png";
-import reactlogo from "@/Resources/Images/react.png";
+// import nextlogo from "@/Resources/Images/nextjs.png";
+// import reactlogo from "@/Resources/Images/react.png";
 import * as React from "react";
 import Image from "next/image";
 import "@/components/CSS/Navbar.css";
@@ -136,11 +136,7 @@ export default function Component() {
     );
 
     setNumber(11);
-    // if (item.breadcrumbTwo != "") {
-    //   setBreadcrumbtwo(item.breadcrumbTwo);
-    // }
     setSelectedone("Creator");
-    // setBreadcrumbfirst("creator");
     setSidebarOpen(false);
   }
 
@@ -328,12 +324,6 @@ export default function Component() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          {/* <a
-            className="border-4 ml-auto bg-violet-800 text-white px-4 py-2 rounded-3xl hover:bg-violet-600 transition animated-button relative"
-            href="/creator"
-          >
-            ✨The creator 🙋
-          </a> */}
           <button
             className="border-4 ml-auto bg-violet-800 text-white px-4 py-2 rounded-3xl hover:bg-violet-600 transition animated-button relative"
             onClick={(e) => {
@@ -345,9 +335,6 @@ export default function Component() {
           </button>
         </header>
 
-        {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-         main page
-        </main> */}
         <Index number={number} />
       </SidebarInset>
     </SidebarProvider>

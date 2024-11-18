@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 function GoogleOAuth() {
   const CodeText1 = `JWT_SECRET_KEY="secretkey" // Random secret key used for JWT encryption and decryption
-GOOGLE_CLIENT_ID="612555997600-69ktpq8kii2ummmdi84uvl5pgnpc5hmp.apps.googleusercontent.com" // Client ID for the Google OAuth application
-GOOGLE_CLIENT_SECRET="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" // Client secret for the Google OAuth application
+GOOGLE_CLIENT_ID="54656dfgfgwefrefgergerg434ii2u3p.apps.googleusercontent.com" // Client ID for the Google OAuth application
+GOOGLE_CLIENT_SECRET="GOCSPX-h_zDr5eIssdfaergrgerWF" // Client secret for the Google OAuth application
 GOOGLE_REDIRECT_URL="http://localhost:3000/OAuthCallbacks/Google" // Redirect URL for Google OAuth callback
-STATE_SECRET="5Q7q6W3E8R4T9Y0U2I" // Secret key for securing the OAuth state parameter
+STATE_SECRET="5Q7q6EWER8R4T9Y0U2I" // Secret key for securing the OAuth state parameter
 `;
   const CodeText2 = `const response = await fetch(\`backendroute\`); //backend route to get the Google consent screen url
 const url = await response.json();
