@@ -1,0 +1,59 @@
+@keyframes border-animation {
+  0% {
+    border-top-color: #ffd700; /* Bright gold */
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: #ffd700;
+    border-right-color: #ffd700;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: transparent;
+    border-right-color: #ffd700;
+    border-bottom-color: #ffd700;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #ffd700;
+    border-left-color: #ffd700;
+  }
+  100% {
+    border-top-color: #ffd700;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #ffd700;
+  }
+}
+
+.animated-button:before {
+  content: "";
+  position: absolute;
+  top: -4px; /* Adjusted for thicker border */
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: inherit;
+  border: 4px solid transparent; /* Thicker border */
+  box-sizing: border-box;
+  animation: border-animation 2s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(223, 190, 2, 0.644)); /* Glow effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.animated-button:hover {
+  transform: translateY(-3px); /* Slight upward movement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensures navbar stays on top */
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
