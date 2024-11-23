@@ -112,7 +112,7 @@ const response = await Simplauth(Provider);`;
   }, []);
 
   useEffect(() => {
-    const handleEsc = (event) => {
+    const handleEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
       }
@@ -151,12 +151,11 @@ const response = await Simplauth(Provider);`;
         <div className="flex flex-col gap-4 items-center justify-center">
           <div className="flex flex-col gap-4 items-center justify-center">
             <p className="text-left text-md text-white-900">
-              Google OAuth is a way to authenticate users using their Google
-              account. It is a popular choice for many applications due to its
-              ease of use and security. It is also a widely used method for
-              authentication in web applications. Google OAuth can be used as
-              both signin and signup. If it's a new email then it goes for
-              signup else it does signin.
+              Google OAuth is a secure and user-friendly method for
+              authenticating users via their Google accounts. Widely adopted in
+              web applications, it supports both sign-in and sign-up processes.
+              If the email is new, the user is signed up; otherwise, they are
+              signed in seamlessly.
             </p>
             {isExpanded && (
               <div
@@ -234,17 +233,16 @@ const response = await Simplauth(Provider);`;
               </div>
             )}
             <p className="text-left text-md text-white-900">
-              In brief, you first need to create a Google OAuth button in the
-              frontend. That should hit the backend route where Simplauth can be
-              used to get the Google consent screen url. Next redirect to the
-              url where the end user can choose to login with whichever gmail he
-              wants to use to login. Then after the user selects the email then
-              a frontend page needs to be triggered where the code needs to be
-              extracted from the url. Then hit the backed with the code in the
-              body and use the Simplauth to get get the end user to login or
-              signup if the email is not available in the database. Thus the
-              authentication is done. Still if the you need the credentials in
-              the frontend then you can use the response object.
+              To implement Google OAuth, start by creating a Google OAuth button
+              on the frontend. When clicked, it should call a backend route
+              where Simplauth generates the Google consent screen URL. Redirect
+              the user to this URL, allowing them to select the Google account
+              they want to use. After the user selects an email, redirect them
+              to a frontend page designed to extract the authorization code from
+              the URL. Send this code to the backend, where Simplauth handles
+              the login or signup process if the email is not found in the
+              database. Authentication is then complete. If you need credentials
+              in the frontend, you can use the response object.
             </p>
             <br />
           </div>
@@ -260,13 +258,13 @@ const response = await Simplauth(Provider);`;
             <br />
             <p>In the .env file of the project add all these variables.</p>
             <CopyableText code={CodeText1} />
-            In the frontend when the user clicks the Google OAuth button, then
-            the backend route should be hit.
+            When the user clicks the Google OAuth button on the frontend, it
+            should trigger a backend route to initiate the Google OAuth process.
             <CopyableText code={CodeText2} />
-            In the backend route, import the Simplauth library and get the
-            Google consent screen url. The response will be the Google consent
-            screen url. Then redirect the user to the Google consent screen url
-            as shown above.
+            In the backend route, import the Simplauth library and use it to
+            generate the Google consent screen URL. The response will contain
+            the consent screen URL, which you can then use to redirect the user
+            to Google consent screen.
             <CopyableText code={CodeText3} />
             <br />
             <br />
@@ -281,29 +279,28 @@ const response = await Simplauth(Provider);`;
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
             <p>
-              After the user selects the email then a frontend page needs to be
-              triggered where the code needs to be extracted from the url. Then
-              hit the backend route with the code in the body. So make a new
-              frontend page just to extract the code and hit the callback
-              function of Simplauth in the backend. So use useEffect hook as
-              shown below.
+              After the user selects an email, redirect them to a frontend page
+              designed to extract the authorization code from the URL. Use the
+              useEffect hook to capture the code and then send it to the backend
+              route in the request body. In the backend, call the Simplauth
+              callback function to complete the authentication process.
             </p>
             <CopyableText code={CodeText4} />
-            In the backend route, import the Simplauth library and send the
-            Provider as shown below into Simplauth to complete the
-            authentication. Remember to have the prisma schema called
-            EmailPassPrisma as shown below.
+            In the backend route, import the Simplauth library and pass the
+            Provider configuration to Simplauth to complete the authentication.
+            Ensure your Prisma schema includes a model named EmailPassPrisma, as
+            shown below, to handle user data effectively.
             <CopyableText code={CodeText5} />
             <CopyableText code={CodeText6} />
-            The response will have the user information object if useful in any
-            way. Then further store the JWT token in the cookie named
-            "simplauthsignin" and redirect the user to the home page or any
-            other page as shown in the useEffect hook example.
+            The response will include a user information object, which can be
+            utilized as needed. Store the JWT token in a cookie named
+            simplauthsignin, then redirect the user to the home page or any
+            other desired page, as demonstrated in the useEffect hook example.
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
             <div className="flex flex-col gap-4 items-center justify-center">
               <p>
-                If you'd like to refer to the example code, check out this
+                If you would like to refer to the example code, check out this
                 GitHub repository:
               </p>
               <Link
@@ -311,7 +308,7 @@ const response = await Simplauth(Provider);`;
                 target="_blank"
                 className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
               >
-                https://www.npmjs.com/package/simplauth
+                https://github.com/rakshit2621/simplauth-website
               </Link>
               <br />
               <br />

@@ -30,7 +30,7 @@ export default function ProjectStructure() {
   }, []);
 
   useEffect(() => {
-    const handleEsc = (event) => {
+    const handleEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
       }
@@ -55,7 +55,7 @@ export default function ProjectStructure() {
         isExpanded ? "bg-gray-500" : "bg-white"
       } transition-all duration-300`}
     >
-      <div className="flex-col justify-start items-start pl-6">
+      <div className="flex-col justify-start items-start pl-4">
         <br />
         <h1 className="text-start text-3xl font-bold text-white-900">
           <b>Project Structure</b>
@@ -151,14 +151,12 @@ export default function ProjectStructure() {
             OAuth, email authentication, password reset, email verification with
             OTP, auto-login with JWT from a cookie, and more.
             <br /> <br />
-            The authentication process in Simplauth handles the user's
+            The authentication process in Simplauth handles the user
             credentials, checks their format and validity using Zod,
             automatically checks for JWT for auto-login, uses Prisma to store
             user data, Redis and Nodemailer for OTP management, and more.
-            <br /> <br /> The usage of Simplauth is explained in the 'Building
-            Your Application' section, so be sure to check it out. Currently,
-            the documentation for Next.js is available, and documentation for
-            other stacks like MERN will be coming soon.
+            <br /> <br /> Currently, the documentation for Next.js is available,
+            and documentation for other stacks like MERN will be coming soon.
             <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
             {/* <CopyableText code={sampleCode} /> */}
             <br />

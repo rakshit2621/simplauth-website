@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CopyableText = ({ code }) => {
+const CopyableText = ({ code }: { code: string }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyToClipboard = () => {

@@ -155,7 +155,17 @@ const SidebarProvider = React.forwardRef<
   }
 );
 SidebarProvider.displayName = "SidebarProvider";
-
+// const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
+//   ({ open, onOpenChange, children, className, ...props }, ref) => {
+//     // Your existing sidebar logic
+//     return (
+//       <div ref={ref} className={className} {...props}>
+//         {children}
+//       </div>
+//     );
+//   }
+// );
+// Sidebar.displayName = "Sidebar";
 const Sidebar = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {

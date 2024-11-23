@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CopyableText from "@/components/HelperComponents/CopyableText";
 import Link from "next/link";
 function EmailToOTP() {
@@ -94,16 +94,9 @@ const response = await Simplauth(Provider);`;
         cookies.set("simplauthsignin", res.newjwt);
         //redirect to home page or any page as per the website
  }`;
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [scale, setScale] = useState(1); // State to track zoom level
-  const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile view
 
   return (
-    <div
-      className={`min-h-screen ${
-        isExpanded ? "bg-gray-500" : "bg-white"
-      } transition-all duration-300`}
-    >
+    <div className={`min-h-screen bg-white transition-all duration-300`}>
       <div className="flex-col justify-start items-start pl-4">
         <br />
         <h1 className="text-start text-3xl font-bold text-white-900">
@@ -123,9 +116,9 @@ const response = await Simplauth(Provider);`;
           </p>
           <p className="text-left text-md text-white-900">
             In brief, the email credential is sent from the frontend to the
-            backend via a specific "Provider". This provider is then passed to
+            backend via a specific Provider. This provider is then passed to
             Simplauth as a parameter in the backend. If successful, OTP will be
-            sent to the user's gmail address. Simplauth will return a response
+            sent to the user gmail address. Simplauth will return a response
             with a success status. Then redirect the user to the OTP page. Here
             OTP credential is used in the Provider and sent to the backend. The
             backedend will hit the Simplauth function and the response would
@@ -156,11 +149,11 @@ const response = await Simplauth(Provider);`;
             The response will be
             {` { message: "OTP is sent to the email address", status: "success" }`}
             . The email has to be stored somewhere for further use in the OTP
-            page. So you’ll then need to store the user's email input for
-            further use on the OTP frontend page. One way to do this is by
-            creating setter and getter methods within a custom hook function,
-            which can be used on the OTP page. For example, create a custom hook
-            component named useEmail.js with the following structure:
+            page. So you’ll then need to store the user email input for further
+            use on the OTP frontend page. One way to do this is by creating
+            setter and getter methods within a custom hook function, which can
+            be used on the OTP page. For example, create a custom hook component
+            named useEmail.js with the following structure:
             <CopyableText code={CodeText5} />
             To use the getter and setter from the hook, see the example code
             below:
@@ -168,7 +161,7 @@ const response = await Simplauth(Provider);`;
             Returning to the main flow: after receiving the response, store the
             email ID for later use on the OTP page, and then redirect to the OTP
             page. After redirecting to the OTP page, the Provider will need the
-            email, which can be obtained from the custom hook's getter function,
+            email, which can be obtained from the custom hook getter function,
             and the OTP from the user input field. The format of the Provider
             is:
             <CopyableText code={CodeText7} />
@@ -182,8 +175,8 @@ const response = await Simplauth(Provider);`;
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
             After redirecting to the OTP page, the Provider will need the email,
-            which can be obtained from the custom hook's getter function, and
-            the OTP from the user input field. The format of the Provider is:
+            which can be obtained from the custom hook getter function, and the
+            OTP from the user input field. The format of the Provider is:
             <CopyableText code={CodeText8} />
             Then send a request to the backend route with this Provider included
             in the request body.
@@ -198,15 +191,15 @@ const response = await Simplauth(Provider);`;
             If everything goes well, the response will be{" "}
             {` { newjwt, status: "success" }`}. Then store the JWT token in a
             cookie named simplauthsignin and redirect to the home page or
-            another page, depending on the website's design.
+            another page, depending on the website design.
             <CopyableText code={CodeText12} />
             If JWT_SECRET_KEY is not defined in the .env file, the response will
             be{" "}
             {` { message: "Please define the environment variable JWT_SECRET_KEY", status: "failed" }`}
-            . For the Email page if the email format doesn't match then the
+            . For the Email page if the email format does not match then the
             response will be,
             {` { message: "Invalid email", tatus: "failed" }`}. For the OTP page
-            if the email or OTP format doesn't match then the response will be,
+            if the email or OTP format does not match then the response will be,
             {` { message: "Invalid credentials", status: "failed" }`}. If the
             OTP is wrong or expired then the response will be{" "}
             {` { message: "Wrong OTP or OTP expired", status: "failed" }`}. For
@@ -218,15 +211,15 @@ const response = await Simplauth(Provider);`;
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
             <p>
-              If you'd like to refer to the example code, check out this GitHub
-              repository:
+              If you would like to refer to the example code, check out this
+              GitHub repository:
             </p>
             <Link
               href="https://www.npmjs.com/package/simplauth"
               target="_blank"
               className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
             >
-              https://www.npmjs.com/package/simplauth
+              https://github.com/rakshit2621/simplauth-website
             </Link>
             <br />
             <br />

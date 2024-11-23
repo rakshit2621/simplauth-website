@@ -46,7 +46,7 @@ function Creator() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        Let's Connect
+        Let&apos;s Connect
       </motion.h1>
       <br />
       {/* Social Icons */}

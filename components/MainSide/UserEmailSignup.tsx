@@ -1,8 +1,7 @@
 import CopyableText from "@/components/HelperComponents/CopyableText";
 import Link from "next/link";
 // import { Link } from "lucide-react";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 export default function UserEmailSignup() {
   const CodeText1 = `JWT_SECRET_KEY="secretkey" //jwt random secret key for encryption and decryption permission`;
   const CodeText2 = `const Provider = {
@@ -83,15 +82,9 @@ setEmailOnly(inputEmail);
   email  String @unique
   otp   String   @default("")
 }`;
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [scale, setScale] = useState(1); // State to track zoom level
-  const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile view
+
   return (
-    <div
-      className={`min-h-screen ${
-        isExpanded ? "bg-gray-500" : "bg-white"
-      } transition-all duration-300`}
-    >
+    <div className={`min-h-screen bg-white transition-all duration-300`}>
       <div className="flex-col justify-start items-start pl-4">
         <br />
         <h1 className="text-start text-3xl font-bold text-white-900">
@@ -106,12 +99,12 @@ setEmailOnly(inputEmail);
 
         <div className="flex flex-col gap-4 items-start justify-center">
           <p className="text-left text-md text-white-900">
-            If you're building a web application that requires adding a
+            If you are building a web application that requires adding a
             username, email, and password to the database, this section is for
             you.
             <br /> <br />
             In brief, the credentials are sent from the frontend to the backend
-            via a specific "Provider". This provider is then passed to Simplauth
+            via a specific Provider. This provider is then passed to Simplauth
             as a parameter. If successful, Simplauth will return a response with
             a JWT and a success status. Additionally, the data will be stored in
             the database since the provider will integrate Prisma. Finally, the
@@ -119,7 +112,7 @@ setEmailOnly(inputEmail);
             completing the setup.
             <br />
             <br />
-            It has 2 approaches ⇒ i) Without OTP ii) With OTP
+            It has 2 approaches ⇒ Without OTP and With OTP
           </p>
           {/* ---------------------------------without otp------------------------------------ */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
@@ -142,9 +135,9 @@ setEmailOnly(inputEmail);
             format to pass validation through Zod: it should be at least 8
             characters long and include at least one uppercase letter, one
             lowercase letter, one number, and one special character. The
-            otpneeded field should be set to false if one doesn't want to verify
-            the user by sending OTP. Then, send a POST request to the backend
-            with this Provider included in the request body.
+            otpneeded field should be set to false if one does not want to
+            verify the user by sending OTP. Then, send a POST request to the
+            backend with this Provider included in the request body.
             <br />
             <CopyableText code={CodeText3} />
             UserEmailPassPrisma named Prisma schema has to be made in the
@@ -215,10 +208,10 @@ setEmailOnly(inputEmail);
             <CopyableText code={CodeText5} />
             If everything goes well, the response will be{" "}
             {` { message: "User has signed up; now check the OTP", status: "success" }`}
-            . You’ll then need to store the user's email input for further use
-            on the OTP frontend page. One way to do this is by creating setter
-            and getter methods within a custom hook function, which can be used
-            on the OTP page. For example, create a custom hook component named
+            . You’ll then need to store the user email input for further use on
+            the OTP frontend page. One way to do this is by creating setter and
+            getter methods within a custom hook function, which can be used on
+            the OTP page. For example, create a custom hook component named
             useEmail.js with the following structure:
             <CopyableText code={CodeText9} />
             To use the getter and setter from the hook, see the example code
@@ -229,8 +222,8 @@ setEmailOnly(inputEmail);
             page.
             <CopyableText code={CodeText11} />
             After redirecting to the OTP page, the Provider will need the email,
-            which can be obtained from the custom hook's getter function, and
-            the OTP from the user input field. The format of the Provider is:
+            which can be obtained from the custom hook getter function, and the
+            OTP from the user input field. The format of the Provider is:
             <CopyableText code={CodeText12} />
             Then send a request to the backend route with this Provider included
             in the request body.
@@ -245,7 +238,7 @@ setEmailOnly(inputEmail);
             If everything goes well, the response will be{" "}
             {` { newjwt, status: "success" }`}. Then store the JWT token in a
             cookie named simplauthsignin and redirect to the home page or
-            another page, depending on the website's design.
+            another page, depending on the website design.
             <CopyableText code={CodeText6} />
             If JWT_SECRET_KEY is not defined in the .env file, the response will
             be{" "}
@@ -268,15 +261,15 @@ setEmailOnly(inputEmail);
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
             <p>
-              If you'd like to refer to the example code, check out this GitHub
-              repository:
+              If you would like to refer to the example code, check out this
+              GitHub repository:
             </p>
             <Link
               href="https://www.npmjs.com/package/simplauth"
               target="_blank"
               className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
             >
-              https://www.npmjs.com/package/simplauth
+              https://github.com/rakshit2621/simplauth-website
             </Link>
             <br />
             <br />

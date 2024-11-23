@@ -105,7 +105,7 @@ const response = await Simplauth(Provider);`;
   }, []);
 
   useEffect(() => {
-    const handleEsc = (event) => {
+    const handleEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
       }
@@ -130,7 +130,7 @@ const response = await Simplauth(Provider);`;
         isExpanded ? "bg-gray-500" : "bg-white"
       } transition-all duration-300`}
     >
-      <div className="flex-col justify-start items-start pl-4">
+      <div className="flex-col justify-start items-start pl-4 ">
         <br />
         <h1 className="text-start text-3xl font-bold text-white-900">
           <b>Github OAuth</b>
@@ -144,12 +144,13 @@ const response = await Simplauth(Provider);`;
         <div className="flex flex-col gap-4 items-center justify-center">
           <div className="flex flex-col gap-4 items-center justify-center">
             <p className="text-left text-md text-white-900">
-              Github OAuth is a way to authenticate users using their Github
-              account. It is a popular choice for many applications due to its
-              ease of use and security. It is also a widely used method for
-              authentication in web applications. Github OAuth can be used as
-              both signin and signup. If it's a new email then it goes for
-              signup else it does signin.
+              GitHub OAuth is a secure and efficient method for authenticating
+              users via their GitHub accounts. It is widely used in web
+              applications for both sign-in and sign-up processes. If the
+              provided email is new, the user is guided through a sign-up flow;
+              otherwise, the system proceeds with sign-in. Its popularity stems
+              from its simplicity, strong security protocols, and seamless
+              integration into applications.
             </p>
             {isExpanded && (
               <div
@@ -227,17 +228,16 @@ const response = await Simplauth(Provider);`;
               </div>
             )}
             <p className="text-left text-md text-white-900">
-              In brief, you first need to create a Github OAuth button in the
-              frontend. That should hit the backend route where Simplauth can be
-              used to get the Github consent screen url. Next redirect to the
-              url where the end user can choose to login with whichever gmail he
-              wants to use to login. Then after the user selects the email then
-              a frontend page needs to be triggered where the code needs to be
-              extracted from the url. Then hit the backed with the code in the
-              body and use the Simplauth to get get the end user to login or
-              signup if the email is not available in the database. Thus the
-              authentication is done. Still if the you need the credentials in
-              the frontend then you can use the response object.
+              To implement GitHub OAuth, start by creating a GitHub OAuth button
+              on the frontend. This button triggers a backend route, where
+              Simplauth generates the GitHub consent screen URL. Redirect the
+              user to this URL, allowing them to log in with their chosen email.
+              Once the user selects an email, extract the authorization code
+              from the redirected URL on the frontend. Send this code to the
+              backend, where Simplauth handles login or signup if the email
+              isn’t found in the database. Authentication is then complete. If
+              credentials are needed on the frontend, they can be accessed from
+              the response object.
             </p>
             <br />
           </div>
@@ -253,13 +253,13 @@ const response = await Simplauth(Provider);`;
             <br />
             <p>In the .env file of the project add all these variables.</p>
             <CopyableText code={CodeText1} />
-            In the frontend when the user clicks the Github OAuth button, then
-            the backend route should be hit.
+            When the user clicks the GitHub OAuth button on the frontend, it
+            triggers a backend route to generate the GitHub consent screen URL.
             <CopyableText code={CodeText2} />
-            In the backend route, import the Simplauth library and get the
-            Github consent screen url. The response will be the Github consent
-            screen url. Then redirect the user to the Github consent screen url
-            as shown above.
+            In the backend route, import the Simplauth library and use it to
+            generate the GitHub consent screen URL. The response will contain
+            the URL, which you can use to redirect the user to the GitHub
+            consent screen.
             <CopyableText code={CodeText3} />
             <br />
             <br />
@@ -274,29 +274,28 @@ const response = await Simplauth(Provider);`;
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
             <p>
-              After the user selects the email then a frontend page needs to be
-              triggered where the code needs to be extracted from the url. Then
-              hit the backend route with the code in the body. So make a new
-              frontend page just to extract the code and hit the callback
-              function of Simplauth in the backend. So use useEffect hook as
-              shown below.
+              After the user selects an email, redirect them to a frontend page
+              designed to extract the authorization code from the URL. Use the
+              useEffect hook on this page to retrieve the code and send it to a
+              backend route. In the backend, use the callback function from
+              Simplauth to process the code for authentication.
             </p>
             <CopyableText code={CodeText4} />
-            In the backend route, import the Simplauth library and send the
-            Provider as shown below into Simplauth to complete the
-            authentication. Remember to have the prisma schema called
-            EmailPassPrisma as shown below.
+            In the backend route, import the Simplauth library and pass the
+            Provider configuration to Simplauth to handle authentication. Ensure
+            your Prisma schema includes the EmailPassPrisma model, as shown
+            below, to manage user data effectively.
             <CopyableText code={CodeText5} />
             <CopyableText code={CodeText6} />
-            The response will have the user information object if useful in any
-            way. Then further store the JWT token in the cookie named
-            "simplauthsignin" and redirect the user to the home page or any
-            other page as shown in the useEffect hook example.
+            The response will include a user information object, which can be
+            utilized as needed. Store the JWT token in a cookie named
+            simplauthsignin and redirect the user to the home page or any
+            desired page, as demonstrated in the useEffect hook example.
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
             <div className="flex flex-col gap-4 items-center justify-center">
               <p>
-                If you'd like to refer to the example code, check out this
+                If you would like to refer to the example code, check out this
                 GitHub repository:
               </p>
               <Link
@@ -304,7 +303,7 @@ const response = await Simplauth(Provider);`;
                 target="_blank"
                 className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
               >
-                https://www.npmjs.com/package/simplauth
+                https://github.com/rakshit2621/simplauth-website
               </Link>
               <br />
               <br />

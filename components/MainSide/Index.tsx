@@ -10,7 +10,13 @@ import NewPassword from "@/components/MainSide/NewPassword";
 import GoogleOAuth from "@/components/MainSide/GoogleOAuth";
 import GithubOAuth from "@/components/MainSide/GithubOAuth";
 import Creator from "@/components/MainSide/Creator";
-function Index(props: number) {
+
+interface Props {
+  number: number;
+}
+function Index(props: Props) {
+  //get the number from props and assiign number type to it
+  // const number = props as number;
   const { number } = props;
   if (number == 1) {
     return (

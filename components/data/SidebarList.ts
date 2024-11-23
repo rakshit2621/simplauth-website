@@ -1,4 +1,26 @@
-export const data = {
+export const data: {
+  versions: string[];
+  navMain: {
+    title: string;
+    url: string;
+    items: {
+      title: string;
+      url: string;
+      isActive: boolean;
+      breadcrumbOne: string;
+      breadcrumbTwo?: string;
+      number?: number;
+      items?: {
+        title: string;
+        url: string;
+        isActive: boolean;
+        breadcrumbOne: string;
+        breadcrumbTwo?: string | undefined;
+        number: number;
+      }[];
+    }[];
+  }[];
+} = {
   versions: ["1.0.1"],
   navMain: [
     {
