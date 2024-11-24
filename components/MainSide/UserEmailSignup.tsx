@@ -98,7 +98,7 @@ setEmailOnly(inputEmail);
         <br />
 
         <div className="flex flex-col gap-4 items-start justify-center">
-          <p className="text-left text-md text-white-900">
+          <div className="text-left text-md text-white-900">
             If you are building a web application that requires adding a
             username, email, and password to the database, this section is for
             you.
@@ -113,7 +113,7 @@ setEmailOnly(inputEmail);
             <br />
             <br />
             It has 2 approaches ⇒ Without OTP and With OTP
-          </p>
+          </div>
           {/* ---------------------------------without otp------------------------------------ */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
 

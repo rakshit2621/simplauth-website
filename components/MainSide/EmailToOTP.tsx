@@ -110,11 +110,11 @@ const response = await Simplauth(Provider);`;
         <br />
 
         <div className="flex flex-col gap-4 items-start justify-center">
-          <p className="text-left text-md text-white-900">
+          <div className="text-left text-md text-white-900">
             This is an optional feature where user can be verified by sending
             OTP to the email address.
-          </p>
-          <p className="text-left text-md text-white-900">
+          </div>
+          <div className="text-left text-md text-white-900">
             In brief, the email credential is sent from the frontend to the
             backend via a specific Provider. This provider is then passed to
             Simplauth as a parameter in the backend. If successful, OTP will be
@@ -123,7 +123,7 @@ const response = await Simplauth(Provider);`;
             OTP credential is used in the Provider and sent to the backend. The
             backedend will hit the Simplauth function and the response would
             have a JWT to be stored in the cookie named simplauthsignin.
-          </p>
+          </div>
           {/* ---------------------------------email page------------------------------------ */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
 

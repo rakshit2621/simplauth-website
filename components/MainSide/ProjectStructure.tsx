@@ -144,7 +144,7 @@ export default function ProjectStructure() {
         )}
         <div className="flex flex-col gap-4 items-start justify-center">
           <br />
-          <p className="text-left text-md text-white-900">
+          <div className="text-left text-md text-white-900">
             Simplauth is a simple authentication library for your project. It
             provides an easy-to-use API for authentication and authorization. It
             has a variety of ready-to-use features like Google OAuth, GitHub
@@ -160,7 +160,7 @@ export default function ProjectStructure() {
             <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
             {/* <CopyableText code={sampleCode} /> */}
             <br />
-          </p>
+          </div>
         </div>
       </div>
     </div>

@@ -99,18 +99,18 @@ const res = await response.json();
         <br />
 
         <div className="flex flex-col gap-4 items-start justify-center">
-          <p className="text-left text-md text-white-900">
+          <div className="text-left text-md text-white-900">
             This has two parts, Autologin and Manual login. And both are
             necessary to be used.
-          </p>
-          <p className="text-left text-md text-white-900">
+          </div>
+          <div className="text-left text-md text-white-900">
             In brief, the autologin feature allows you to automatically log in
             to your account when you visit the website. It works by sending a
             request to the server upon your visit, and if successful, you are
             automatically logged in. The manual login feature allows you to log
             in manually if autologin fails. It prompts you to enter your email
             and password when you visit the website.
-          </p>
+          </div>
           {/* ---------------------------------Autologin------------------------------------ */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
 

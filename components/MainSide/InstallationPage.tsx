@@ -20,14 +20,14 @@ export default function InstallationPage() {
         <h2 className="text-center text-2xl font-bold text-white-900">
           Install the library
         </h2>
-        <p className="text-center text-md text-white-900">
+        <div className="text-center text-md text-white-900">
           Simplauth is available on npm.
           <br />
           Run the following command in your project terminal:
           <br /> <br />
           <CopyableText code={CodeText1} />
           <br />
-        </p>
+        </div>
       </div>
       <br />
 

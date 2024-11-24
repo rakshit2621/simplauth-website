@@ -143,7 +143,7 @@ const response = await Simplauth(Provider);`;
         <br />
         <div className="flex flex-col gap-4 items-center justify-center">
           <div className="flex flex-col gap-4 items-center justify-center">
-            <p className="text-left text-md text-white-900">
+            <div className="text-left text-md text-white-900">
               GitHub OAuth is a secure and efficient method for authenticating
               users via their GitHub accounts. It is widely used in web
               applications for both sign-in and sign-up processes. If the
@@ -151,7 +151,7 @@ const response = await Simplauth(Provider);`;
               otherwise, the system proceeds with sign-in. Its popularity stems
               from its simplicity, strong security protocols, and seamless
               integration into applications.
-            </p>
+            </div>
             {isExpanded && (
               <div
                 className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -227,7 +227,7 @@ const response = await Simplauth(Provider);`;
                 </button>
               </div>
             )}
-            <p className="text-left text-md text-white-900">
+            <div className="text-left text-md text-white-900">
               To implement GitHub OAuth, start by creating a GitHub OAuth button
               on the frontend. This button triggers a backend route, where
               Simplauth generates the GitHub consent screen URL. Redirect the
@@ -238,7 +238,7 @@ const response = await Simplauth(Provider);`;
               isn’t found in the database. Authentication is then complete. If
               credentials are needed on the frontend, they can be accessed from
               the response object.
-            </p>
+            </div>
             <br />
           </div>
         </div>

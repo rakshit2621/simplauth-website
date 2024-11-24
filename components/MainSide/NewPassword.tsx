@@ -51,7 +51,7 @@ const response = await Simplauth(Provider);`;
         <br />
 
         <div className="flex flex-col gap-4 items-start justify-center">
-          <p className="text-left text-md text-white-900">
+          <div className="text-left text-md text-white-900">
             This page can be used after the Email + OTP sign-in page or any
             other method, depending on your requirements. The page must capture
             three inputs: email ID, password, and confirm password, which should
@@ -61,7 +61,7 @@ const response = await Simplauth(Provider);`;
             {` { message : ”Password has been updated successfully", status : "success" }`}{" "}
             . Once the new password is created, redirect the user to the home
             page or another page as needed.
-          </p>
+          </div>
 
           {/* --------------------------------------------------------------------- */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>

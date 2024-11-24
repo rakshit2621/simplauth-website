@@ -150,13 +150,13 @@ const response = await Simplauth(Provider);`;
         <br />
         <div className="flex flex-col gap-4 items-center justify-center">
           <div className="flex flex-col gap-4 items-center justify-center">
-            <p className="text-left text-md text-white-900">
+            <div className="text-left text-md text-white-900">
               Google OAuth is a secure and user-friendly method for
               authenticating users via their Google accounts. Widely adopted in
               web applications, it supports both sign-in and sign-up processes.
               If the email is new, the user is signed up; otherwise, they are
               signed in seamlessly.
-            </p>
+            </div>
             {isExpanded && (
               <div
                 className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -232,7 +232,7 @@ const response = await Simplauth(Provider);`;
                 </button>
               </div>
             )}
-            <p className="text-left text-md text-white-900">
+            <div className="text-left text-md text-white-900">
               To implement Google OAuth, start by creating a Google OAuth button
               on the frontend. When clicked, it should call a backend route
               where Simplauth generates the Google consent screen URL. Redirect
@@ -243,7 +243,7 @@ const response = await Simplauth(Provider);`;
               the login or signup process if the email is not found in the
               database. Authentication is then complete. If you need credentials
               in the frontend, you can use the response object.
-            </p>
+            </div>
             <br />
           </div>
         </div>
