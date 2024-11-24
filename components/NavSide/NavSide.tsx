@@ -162,7 +162,7 @@ export default function Component() {
         {/* open={sidebarOpen} onOpenChange={setSidebarOpen} */}
         {/* ts-ignore */}
         {/* // eslint-disable-next-line react/no-unknown-property */}
-        <Sidebar open={sidebarOpen} onOpenChange={setSidebarOpen}>
+        <Sidebar>
           <SidebarHeader>
             <SidebarMenu>
               <SidebarMenuItem>
