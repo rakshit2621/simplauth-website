@@ -122,11 +122,9 @@ setEmailOnly(inputEmail);
           </h3>
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>
-              In the .env file of the project add the JWT_SECRET_KEY variable
-              having a random secret string which can be used to encrypt and
-              decrypt the JWT token.
-            </p>
+            In the .env file of the project add the JWT_SECRET_KEY variable
+            having a random secret string which can be used to encrypt and
+            decrypt the JWT token.
             <CopyableText code={CodeText1} />
             <CopyableText code={CodeText2} />
             You need to create this Provider with specific requirements, so
@@ -150,29 +148,24 @@ setEmailOnly(inputEmail);
             Simplauth library.
             <br />
             <CopyableText code={CodeText5} />
-            <p>
-              Simplauth will return {` { newjwt, status: "success" }`} if
-              everything goes well. This response can then be used on the
-              frontend to store the newjwt in a cookie named simplauthsignin.
-              Example:
-            </p>
+            Simplauth will return {` { newjwt, status: "success" }`} if
+            everything goes well. This response can then be used on the frontend
+            to store the newjwt in a cookie named simplauthsignin. Example:
             <CopyableText code={CodeText6} />
-            <p>
-              If JWT_SECRET_KEY is not available in the .env file, the response
-              will be
-              {` {message: "Please define environment variable with name JWT_SECRET_KEY", status: "failed"}`}
-              . The user credentials—username as a string, email in a valid
-              email format, and a password with at least 8 characters, including
-              one lowercase, one uppercase, one special character, and one
-              number—must match the required format. If any of these do not meet
-              the specified format, the response will be
-              {` { message: "Invalid credentials", status: "failed" }`}. If user
-              already exists then the response would be{" "}
-              {`{message: "User already exists", status: "failed"}`}. For any
-              other error, the catch block will handle it and return{" "}
-              {` { message: "Something went wrong", status: "failed", error: e }`}
-              .
-            </p>
+            If JWT_SECRET_KEY is not available in the .env file, the response
+            will be
+            {` {message: "Please define environment variable with name JWT_SECRET_KEY", status: "failed"}`}
+            . The user credentials—username as a string, email in a valid email
+            format, and a password with at least 8 characters, including one
+            lowercase, one uppercase, one special character, and one number—must
+            match the required format. If any of these do not meet the specified
+            format, the response will be
+            {` { message: "Invalid credentials", status: "failed" }`}. If user
+            already exists then the response would be{" "}
+            {`{message: "User already exists", status: "failed"}`}. For any
+            other error, the catch block will handle it and return{" "}
+            {` { message: "Something went wrong", status: "failed", error: e }`}
+            .
           </div>
           {/* ----------------------------------------with otp----------------------------------- */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
@@ -182,7 +175,7 @@ setEmailOnly(inputEmail);
           </h3>
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>In the .env file of the project add all these variables.</p>
+            In the .env file of the project add all these variables.
             <CopyableText code={CodeText7} />
             <CopyableText code={CodeText8} />
             You need to create this Provider with specific requirements, so
@@ -260,10 +253,8 @@ setEmailOnly(inputEmail);
             <br />
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-            <p>
-              If you would like to refer to the example code, check out this
-              GitHub repository:
-            </p>
+            If you would like to refer to the example code, check out this
+            GitHub repository:
             <Link
               href="https://www.npmjs.com/package/simplauth"
               target="_blank"

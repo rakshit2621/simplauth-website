@@ -7,7 +7,7 @@ import Image from "next/image";
 import "@/components/CSS/Navbar.css";
 import { data } from "@/components/data/SidebarList";
 import { Check, ChevronRight, ChevronsUpDown } from "lucide-react";
-import Index from "@/components//MainSide/Index";
+import Index from "@/components/MainSide/Index";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -162,7 +162,7 @@ export default function Component() {
         {/* open={sidebarOpen} onOpenChange={setSidebarOpen} */}
         {/* ts-ignore */}
         {/* // eslint-disable-next-line react/no-unknown-property */}
-        <Sidebar open={sidebarOpen} onOpenChange={setSidebarOpen}>
+        <Sidebar>
           <SidebarHeader>
             <SidebarMenu>
               <SidebarMenuItem>

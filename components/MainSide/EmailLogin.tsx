@@ -119,11 +119,9 @@ const res = await response.json();
           </h3>
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>
-              In the .env file of the project add the JWT_SECRET_KEY variable
-              having a random secret string which can be used to encrypt and
-              decrypt the JWT token.
-            </p>
+            In the .env file of the project add the JWT_SECRET_KEY variable
+            having a random secret string which can be used to encrypt and
+            decrypt the JWT token.
             <CopyableText code={CodeText1} />
             Extract the cookie named simplauthsignin.
             <CopyableText code={CodeText2} />
@@ -138,13 +136,11 @@ const res = await response.json();
             library.
             <CopyableText code={CodeText4} />
             <CopyableText code={CodeText5} />
-            <p>
-              Simplauth will return {` { newjwt, status: "success" }`} if
-              everything goes well. This response can then be used to store
-              newjwt in a cookie named simplauthsignin, effectively updating or
-              refreshing the JWT to extend its validity for the next 7 days.
-              This completes the autologin process.
-            </p>
+            Simplauth will return {` { newjwt, status: "success" }`} if
+            everything goes well. This response can then be used to store newjwt
+            in a cookie named simplauthsignin, effectively updating or
+            refreshing the JWT to extend its validity for the next 7 days. This
+            completes the autologin process.
           </div>
           {/* ----------------------------------------Manual login----------------------------------- */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
@@ -154,14 +150,12 @@ const res = await response.json();
           </h3>
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>
-              If autologin fails due to reasons such as the simplauthsignin
-              cookie being deleted, expired, or never created because the user
-              hasn’t signed up, the user will need to log in manually by
-              providing credentials. The user must supply two things: email and
-              password within the Provider. Keep the Provider exactly as shown,
-              and send a request to the backend as demonstrated below.
-            </p>
+            If autologin fails due to reasons such as the simplauthsignin cookie
+            being deleted, expired, or never created because the user hasn’t
+            signed up, the user will need to log in manually by providing
+            credentials. The user must supply two things: email and password
+            within the Provider. Keep the Provider exactly as shown, and send a
+            request to the backend as demonstrated below.
             <CopyableText code={CodeText6} />
             Send the request to the same backend endpoint; everything in the
             backend will remain the same. If successful, the response will be{" "}
@@ -185,10 +179,8 @@ const res = await response.json();
             <br />
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-            <p>
-              If you would like to refer to the example code, check out this
-              GitHub repository:
-            </p>
+            If you would like to refer to the example code, check out this
+            GitHub repository:
             <Link
               href="https://www.npmjs.com/package/simplauth"
               target="_blank"

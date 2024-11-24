@@ -79,7 +79,7 @@ export const data: {
               number: 5,
             },
             {
-              title: "Username + Email Signin",
+              title: "Username + Email Login",
               url: "#",
               isActive: false,
               breadcrumbOne: "Building Your Application",

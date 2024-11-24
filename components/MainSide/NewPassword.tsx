@@ -68,11 +68,9 @@ const response = await Simplauth(Provider);`;
 
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>
-              In the .env file of the project add the JWT_SECRET_KEY variable
-              having a random secret string which can be used to encrypt and
-              decrypt the JWT token.
-            </p>
+            In the .env file of the project add the JWT_SECRET_KEY variable
+            having a random secret string which can be used to encrypt and
+            decrypt the JWT token.
             <CopyableText code={CodeText1} />
             You must create this Provider with the specified requirements, so
             please do not modify it. The email must be unique and not already
@@ -102,10 +100,8 @@ const response = await Simplauth(Provider);`;
             <CopyableText code={CodeText5} />
             <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
             <div className="flex flex-col gap-4 items-center justify-center">
-              <p>
-                If you would like to refer to the example code, check out this
-                GitHub repository:
-              </p>
+              If you would like to refer to the example code, check out this
+              GitHub repository:
               <Link
                 href="https://www.npmjs.com/package/simplauth"
                 target="_blank"

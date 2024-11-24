@@ -251,7 +251,7 @@ const response = await Simplauth(Provider);`;
           </h3>
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>In the .env file of the project add all these variables.</p>
+            In the .env file of the project add all these variables.
             <CopyableText code={CodeText1} />
             When the user clicks the GitHub OAuth button on the frontend, it
             triggers a backend route to generate the GitHub consent screen URL.
@@ -273,13 +273,11 @@ const response = await Simplauth(Provider);`;
           </h3>
           <div className="flex flex-col gap-4 items-center justify-center">
             <br />
-            <p>
-              After the user selects an email, redirect them to a frontend page
-              designed to extract the authorization code from the URL. Use the
-              useEffect hook on this page to retrieve the code and send it to a
-              backend route. In the backend, use the callback function from
-              Simplauth to process the code for authentication.
-            </p>
+            After the user selects an email, redirect them to a frontend page
+            designed to extract the authorization code from the URL. Use the
+            useEffect hook on this page to retrieve the code and send it to a
+            backend route. In the backend, use the callback function from
+            Simplauth to process the code for authentication.
             <CopyableText code={CodeText4} />
             In the backend route, import the Simplauth library and pass the
             Provider configuration to Simplauth to handle authentication. Ensure
@@ -294,10 +292,8 @@ const response = await Simplauth(Provider);`;
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
             <div className="flex flex-col gap-4 items-center justify-center">
-              <p>
-                If you would like to refer to the example code, check out this
-                GitHub repository:
-              </p>
+              If you would like to refer to the example code, check out this
+              GitHub repository:
               <Link
                 href="https://www.npmjs.com/package/simplauth"
                 target="_blank"
