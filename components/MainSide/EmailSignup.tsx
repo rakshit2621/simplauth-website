@@ -94,12 +94,10 @@ setEmailOnly(inputEmail);
           <b>Email Signup</b>
         </h1>
         <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-
         <h2 className="text-start text-2xl font-bold text-white-900">
           Overview
         </h2>
         <br />
-
         <div className="flex flex-col gap-4 items-start justify-center">
           <div className="text-left text-md text-white-900">
             If you are building a web application that requires adding a email
@@ -122,7 +120,7 @@ setEmailOnly(inputEmail);
           <h3 className=" text-left text-xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-blue-400 after:rounded">
             Without OTP
           </h3>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             In the .env file of the project add the JWT_SECRET_KEY variable
             having a random secret string which can be used to encrypt and
@@ -173,7 +171,7 @@ setEmailOnly(inputEmail);
           <h3 className="text-left text-xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-blue-400 after:rounded">
             With OTP
           </h3>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             In the .env file of the project add all these variables.
             <CopyableText code={CodeText7} />
@@ -251,24 +249,26 @@ setEmailOnly(inputEmail);
             {` { message: "Wrong OTP or OTP expired", status: "failed" }`}.
             <br />
             <br />
-            <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-            Still if you want to refer the example code then checkout this gihub
-            repo :{" "}
-            <Link
-              href="https://www.npmjs.com/package/simplauth"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
-            >
-              https://github.com/rakshit2621/simplauth-website
-            </Link>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </div>
         </div>
+        <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
+        <div className="flex flex-col gap-4 items-center justify-center">
+          Still if you want to refer the example code then checkout this gihub
+          repo :{" "}
+          <Link
+            href="https://www.npmjs.com/package/simplauth"
+            target="_blank"
+            className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
+          >
+            https://github.com/rakshit2621/simplauth-website
+          </Link>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   );

@@ -11,11 +11,11 @@ const CopyableText = ({ code }: { code: string }) => {
   };
 
   return (
-    <div className="relative bg-gray-100 text-gray-200 rounded-md p-4 shadow-md ">
+    <div className="max-w-[93vw] relative bg-gray-100 text-gray-200 rounded-md p-4 shadow-md ">
       <div className="pr-12">
         {" "}
         {/* Adds right padding for the button */}
-        <pre className="text-purple-900 font-mono text-sm whitespace-pre-wrap">
+        <pre className="break-words text-purple-900 font-mono text-sm whitespace-pre-wrap">
           {code}
         </pre>
       </div>

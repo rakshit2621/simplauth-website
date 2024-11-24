@@ -66,7 +66,7 @@ const response = await Simplauth(Provider);`;
           {/* --------------------------------------------------------------------- */}
           <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
 
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             In the .env file of the project add the JWT_SECRET_KEY variable
             having a random secret string which can be used to encrypt and

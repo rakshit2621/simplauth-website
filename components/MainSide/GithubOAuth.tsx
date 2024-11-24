@@ -136,7 +136,6 @@ const response = await Simplauth(Provider);`;
           <b>Github OAuth</b>
         </h1>
         <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-
         <h2 className="text-start text-2xl font-bold text-white-900">
           Overview
         </h2>
@@ -249,7 +248,7 @@ const response = await Simplauth(Provider);`;
           <h3 className="text-left text-xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-blue-400 after:rounded">
             Get the Github Consent Screen URL
           </h3>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             In the .env file of the project add all these variables.
             <CopyableText code={CodeText1} />
@@ -271,7 +270,7 @@ const response = await Simplauth(Provider);`;
           <h3 className="text-left text-xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-blue-400 after:rounded">
             Hit the callback to complete the authentication
           </h3>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             After the user selects an email, redirect them to a frontend page
             designed to extract the authorization code from the URL. Use the
@@ -291,24 +290,24 @@ const response = await Simplauth(Provider);`;
             desired page, as demonstrated in the useEffect hook example.
             <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-2 mb-2 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-            <div className="flex flex-col gap-4 items-center justify-center">
-              If you would like to refer to the example code, check out this
-              GitHub repository:
-              <Link
-                href="https://www.npmjs.com/package/simplauth"
-                target="_blank"
-                className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
-              >
-                https://github.com/rakshit2621/simplauth-website
-              </Link>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-            </div>
           </div>
+        </div>{" "}
+        <div className="flex flex-col gap-4 items-center justify-center">
+          If you would like to refer to the example code, check out this GitHub
+          repository:
+          <Link
+            href="https://www.npmjs.com/package/simplauth"
+            target="_blank"
+            className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
+          >
+            https://github.com/rakshit2621/simplauth-website
+          </Link>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </div>

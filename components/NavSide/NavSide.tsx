@@ -157,12 +157,12 @@ export default function Component() {
 
   return (
     <>
-      <SidebarProvider className="navbar">
+      <SidebarProvider>
         {/* I want to ignore the next line open as it is throwing error so can */}
         {/* open={sidebarOpen} onOpenChange={setSidebarOpen} */}
         {/* ts-ignore */}
         {/* // eslint-disable-next-line react/no-unknown-property */}
-        <Sidebar>
+        <Sidebar open={sidebarOpen} onOpenChange={setSidebarOpen}>
           <SidebarHeader>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -325,7 +325,7 @@ export default function Component() {
           <SidebarRail />
         </Sidebar>
         <SidebarInset>
-          <header className="flex sticky top-0 bg-background h-16 shrink-0 items-center gap-2 border-b px-4">
+          <header className="navbar flex sticky top-0 bg-background h-16 shrink-0 items-center gap-2 border-b px-4">
             <SidebarTrigger className="-ml-1" onClick={toggleSidebar} />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>

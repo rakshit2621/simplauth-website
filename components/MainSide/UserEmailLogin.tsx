@@ -115,7 +115,7 @@ const res = await response.json();
           <h3 className="text-left text-xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-blue-400 after:rounded">
             Autologin
           </h3>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             In the .env file of the project add the JWT_SECRET_KEY variable
             having a random secret string which can be used to encrypt and
@@ -146,7 +146,7 @@ const res = await response.json();
           <h3 className="text-left text-xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-blue-400 after:rounded">
             Manual login
           </h3>
-          <div className="flex flex-col gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-left justify-center">
             <br />
             If autologin fails due to reasons such as the simplauthsignin cookie
             being deleted, expired, or never created because the user hasn’t
@@ -174,18 +174,18 @@ const res = await response.json();
             {` { message: "Something went wrong", status: "failed", error: e }`}
             .
             <br />
-            <br />
-            <br />
             <div className="w-11/12 border-t-2 border-gray-300 mt-8 mb-8 shadow-sm bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
-            If you would like to refer to the example code, check out this
-            GitHub repository:
-            <Link
-              href="https://www.npmjs.com/package/simplauth"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
-            >
-              https://github.com/rakshit2621/simplauth-website
-            </Link>
+            <div className="flex flex-col gap-4 items-center justify-center">
+              If you would like to refer to the example code, check out this
+              GitHub repository:
+              <Link
+                href="https://www.npmjs.com/package/simplauth"
+                target="_blank"
+                className="text-blue-500 hover:text-blue-700 underline transition duration-200 ease-in-outrelative text-blue-600 font-semibold underline decoration-transparent underline-offset-4  hover:decoration-blue-600 hover:text-blue-700 hover:scale-105 transition duration-200 ease-in-out "
+              >
+                https://github.com/rakshit2621/simplauth-website
+              </Link>
+            </div>
             <br />
             <br />
             <br />
